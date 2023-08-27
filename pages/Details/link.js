@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import { NextSeo } from "next-seo";
 
-function Details({ dnews }) {
+function Details({ news }) {
   const SEO = {
     title: `Covid19 News | ${news.title}`,
     description: dnews.description,
@@ -18,10 +18,10 @@ function Details({ dnews }) {
     <>
       <NextSeo {...SEO} />
       <div className="container">
-        <a href={dnews.url} className="card">
-          <img src={dnews.image} alt={dnews.title} />
+        <a href={news.url} className="card">
+          <img src={news.image} alt={news.title} />
           <h3> {news.title}</h3>
-          <p dangerouslySetInnerHTML={{ __html: dnews.description }}></p>
+          <p dangerouslySetInnerHTML={{ __html: news.description }}></p>
         </a>
 
         <style jsx>{`
