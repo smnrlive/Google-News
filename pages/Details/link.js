@@ -3,12 +3,12 @@ import { NextSeo } from "next-seo";
 
 function Details({ dnews }) {
   const SEO = {
-    title: `Covid19 News | ${dnews.title}`,
+    title: `Covid19 News | ${news.title}`,
     description: dnews.description,
     image: dnews.image,
 
     openGraph: {
-      title: `Covid19 News | ${dnews.title}`,
+      title: `Covid19 News | ${news.title}`,
       description: dnews.description,
       image: dnews.image,
     },
@@ -20,7 +20,7 @@ function Details({ dnews }) {
       <div className="container">
         <a href={dnews.url} className="card">
           <img src={dnews.image} alt={dnews.title} />
-          <h3> {dnews.title}</h3>
+          <h3> {news.title}</h3>
           <p dangerouslySetInnerHTML={{ __html: dnews.description }}></p>
         </a>
 
