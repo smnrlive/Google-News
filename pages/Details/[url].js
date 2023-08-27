@@ -19,10 +19,10 @@ function Movie({ movie }) {
       <NextSeo {...SEO} />
       <div variant="container">
         <div as="h2" my={40}>
-          {movie.title}
+          {news.title}
         </div>
         <div maxWidth={600}>
-          <img src={movie.image} alt={movie.title} />
+          <img src={movie.image} alt={news.title} />
           <p dangerouslySetInnerHTML={{ __html: movie.description }}></p>
         </div>
       </div>
